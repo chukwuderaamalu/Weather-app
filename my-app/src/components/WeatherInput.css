@@ -1,0 +1,89 @@
+/* Reset + base */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.app {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-image 0.5s ease-in-out;
+}
+
+/* Optional overlay for readability */
+.app::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: -1;
+}
+
+/* Main container */
+div {
+  width: 100%;
+  text-align: center;
+}
+
+/* Input + button area */
+input {
+  margin-top: 2rem;
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  width: 250px;
+}
+
+button {
+  margin-left: 0.5rem;
+  padding: 0.8rem 1.2rem;
+  border-radius: 10px;
+  border: none;
+  background: #1e90ff;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+button:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+/* Weather result card */
+h2 {
+  margin-top: 3rem;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+p {
+  margin: 1rem auto;
+  max-width: 350px;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 14px;
+}
+
+/* Make temperature stand out */
+p:first-of-type {
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.25);
+}
